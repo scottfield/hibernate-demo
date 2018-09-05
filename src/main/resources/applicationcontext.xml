@@ -33,7 +33,7 @@
                 <!--<prop key="net.sf.ehcache.configurationResourceName">true</prop>-->
             </props>
         </property>
-        <property name="packagesToScan" value="com.jackie.hibernate"/>
+        <property name="packagesToScan" value="com.jackie.hibernate.model"/>
     </bean>
     <bean id="hibernateTemplate" class="org.springframework.orm.hibernate4.HibernateTemplate"
           p:sessionFactory-ref="sessionFactory"/>
