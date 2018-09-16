@@ -19,12 +19,11 @@
     </bean>
     <!-- 配置hibernate sessionFactory -->
     <bean id="sessionFactory"
-          class="org.springframework.orm.hibernate4.LocalSessionFactoryBean">
+          class="org.springframework.orm.hibernate5.LocalSessionFactoryBean">
         <property name="dataSource" ref="dataSource"/>
         <property name="hibernateProperties">
             <props>
                 <prop key="hibernate.dialect">org.hibernate.dialect.MySQL5Dialect</prop>
-                <prop key="hibernate.show_sql">true</prop>
                 <prop key="hibernate.jdbc.batch_size">20</prop>
                 <prop key="hibernate.cache.region.factory_class">org.hibernate.cache.ehcache.EhCacheRegionFactory</prop>
                 <prop key="hibernate.cache.use_second_level_cache">true</prop>
@@ -35,10 +34,10 @@
         </property>
         <property name="packagesToScan" value="com.jackie.hibernate.model"/>
     </bean>
-    <bean id="hibernateTemplate" class="org.springframework.orm.hibernate4.HibernateTemplate"
+    <bean id="hibernateTemplate" class="org.springframework.orm.hibernate5.HibernateTemplate"
           p:sessionFactory-ref="sessionFactory"/>
     <!-- 配置hibernate事务管理器 -->
     <bean id="transactionManager"
-          class="org.springframework.orm.hibernate4.HibernateTransactionManager"
+          class="org.springframework.orm.hibernate5.HibernateTransactionManager"
           p:sessionFactory-ref="sessionFactory"/>
 </beans>

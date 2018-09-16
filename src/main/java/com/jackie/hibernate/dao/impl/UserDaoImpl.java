@@ -5,7 +5,7 @@ import com.jackie.hibernate.model.User;
 import org.hibernate.Query;
 import org.hibernate.SessionFactory;
 import org.hibernate.stat.Statistics;
-import org.springframework.orm.hibernate4.HibernateTemplate;
+import org.springframework.orm.hibernate5.HibernateTemplate;
 import org.springframework.stereotype.Repository;
 
 import javax.annotation.Resource;
